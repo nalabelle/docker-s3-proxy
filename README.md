@@ -1,11 +1,10 @@
 # AWS S3 Proxy
 
-[![GitHub repo](https://img.shields.io/badge/github-repo-blue.svg)](https://github.com/meltwater/docker-s3-proxy)
-[![GitHub license](https://img.shields.io/github/license/meltwater/docker-s3-proxy.svg)](./LICENSE.txt)
-[![Docker Build Status](https://img.shields.io/docker/build/meltwater/s3-proxy.svg)](https://hub.docker.com/r/meltwater/s3-proxy/)
+[![GitHub repo](https://img.shields.io/badge/github-repo-blue.svg)](https://github.com/nalabelle/docker-s3-proxy)
+[![GitHub license](https://img.shields.io/github/license/nalabelle/docker-s3-proxy.svg)](./LICENSE.txt)
+[![Docker Build Status](https://img.shields.io/docker/build/nalabelle/s3-proxy.svg)](https://hub.docker.com/r/nalabelle/docker-s3-proxy)
 
 Custom Docker build of [s3-proxy].
-Runs on port 8080 as user s3-proxy.
 
 [s3-proxy]: https://github.com/pottava/aws-s3-proxy
 
