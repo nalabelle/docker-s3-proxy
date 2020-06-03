@@ -1,11 +1,6 @@
-FROM pottava/s3-proxy:1.4
+FROM pottava/s3-proxy as upstream
 
-RUN apk --no-cache add \
-    ca-certificates \
- && addgroup -g 1000 s3-proxy \
- && adduser -D -G s3-proxy -u 1000 s3-proxy
-
-ENV S3_PROXY_VERSION="1.4" \
-    APP_PORT=8080
-
-USER s3-proxy
+FROM debian:buster-slim
+COPY --from=upstream /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
+COPY --from=upstream /app /aws-s3-proxy
+ENTRYPOINT ["/aws-s3-proxy"]
